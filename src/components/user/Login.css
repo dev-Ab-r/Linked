@@ -1,0 +1,34 @@
+
+.login{
+    display: grid;
+    place-items: center;
+    height: 80vh;
+    width: 100;
+    margin-left:80vh;
+   
+}
+
+.login >button{
+    width:300px;
+    background-color: rgb(82, 158, 67);
+    color:white;
+    font-weight: 800;
+}
+.login >button:hover{
+    
+    background-color:rgb(10, 44, 24);
+    color:white;
+    
+}
+.login >div>img {
+    object-fit: contain;
+}
+
+@media(max-width:570px){
+    .login{
+        margin: 0 10%;
+    }
+    .img{
+        width:90%
+    }
+}

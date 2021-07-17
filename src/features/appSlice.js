@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createSlice } from '@reduxjs/toolkit';
 // const initialState = {
 //   value: 0,
@@ -11,15 +12,16 @@ export const appSlice = createSlice({
       channelName:null
   },
   reducers: {
-    setChannelId: (state,action) => {
-      state.app += action.payload
+    setChannelInfo:(state,action) => {
+      state.channelId = action.payload.channelId,
+      state.channelName = action.payload.channelName
     },
     
-  }
+  },
   
 });
 
-export const { setChannelId } = appSlice.actions;
+export const {setChannelInfo} = appSlice.actions;
 
 export const selectChannelId= (state) => state.app.channelId;
 export const selectChanneName= (state) => state.app.channelName;
